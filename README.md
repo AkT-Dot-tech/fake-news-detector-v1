@@ -42,23 +42,25 @@ using NLP techniques and Logistic Regression.
 
 ## 📂 Project Structure
 
+```text
 fake-news-detector/
 │
 ├── data/
-│   ├── Fake.csv          # Fake news articles
-│   └── True.csv          # Real news articles
+│   ├── Fake.csv
+│   └── True.csv
 │
 ├── src/
-│   └── train_model.py    # Training pipeline
+│   └── train_model.py
 │
 ├── app/
-│   └── streamlit_app.py  # Streamlit web app
+│   └── streamlit_app.py
 │
 ├── model/
-│   ├── model.pkl         # Saved trained model
-│   └── vectorizer.pkl    # Saved TF-IDF vectorizer
+│   ├── model.pkl
+│   └── vectorizer.pkl
 │
 └── README.md
+```
 ---
 
 ## 🚀 How to Run
