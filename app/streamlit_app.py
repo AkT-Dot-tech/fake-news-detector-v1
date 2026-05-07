@@ -13,16 +13,14 @@ vectorizer = pickle.load(open('model/vectorizer.pkl', 'rb'))
 
 # ── Text cleaning ─────────────────────────────────────────────────
 def clean_text(text):
-    text = text.lower()
+    text = str(text).lower()
     text = re.sub(r'http\S+', '', text)
+    text = re.sub(r'\(reuters\)', '', text)       # ← added
+    text = re.sub(r'reuters', '', text)            # ← added
     text = re.sub(r'[^a-zA-Z]', ' ', text)
     words = text.split()
     words = [w for w in words if w not in stop_words and len(w) > 2]
-
-    if len(words) == 0:
-        return "empty"
-
-    return " ".join(words)
+    return " ".join(words) if words else "empty"
 
 # ── Page config ───────────────────────────────────────────────────
 st.set_page_config(
@@ -366,8 +364,8 @@ st.markdown("""
         <div class="stat-label">Articles Trained</div>
     </div>
     <div class="stat-divider"></div>
-    <div class="stat-item">
-        <div class="stat-num">5,000</div>
+     <div class="stat-item">
+        <div class="stat-num">10,000</div>
         <div class="stat-label">TF-IDF Features</div>
     </div>
     <div class="stat-divider"></div>
