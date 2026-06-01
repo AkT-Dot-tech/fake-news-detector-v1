@@ -118,7 +118,10 @@ meaning and context of words — not just their frequency. This will allow the m
 handle short texts, sarcasm, and out-of-domain news articles far more accurately.
 
 ---
+## One Line Summary
+I built an NLP pipeline that cleans news text, converts it into TF-IDF numerical vectors, and uses Logistic Regression to learn statistical patterns that classify news articles as fake or real.
 
+---
 ## 👨‍💻 Author
 
 **Akshat** — B.Tech CSE (AI/ML), IILM University, Greater Noida
